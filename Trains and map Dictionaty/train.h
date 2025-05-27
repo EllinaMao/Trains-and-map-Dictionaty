@@ -1,6 +1,5 @@
 ﻿#pragma once
-#ifndef TRAIN_H  
-#define TRAIN_H  
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -38,4 +37,3 @@ public:
 
 };
 
-#endif // TRAIN_H

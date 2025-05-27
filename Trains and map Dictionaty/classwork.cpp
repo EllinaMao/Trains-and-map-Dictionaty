@@ -1,7 +1,5 @@
 ﻿#include <iostream>
 #include <vector>
-#include <string>
-#include <map>
 #include "train.h"
 #include "trainsArr.h"
 using namespace std;
@@ -31,12 +29,11 @@ using namespace std;
 
 int main()
 {
-#ifdef TRAIN_H
+
 try {
 
     TrainsArr trainsArr; 
 	trainsArr.addTrain(Train("123", "10:00", "New York"));
-    trainsArr.printAllTrains();
 
 }
 
@@ -46,7 +43,6 @@ catch (const std::exception& e) {
 catch (...) {
     std::cerr << "An unexpected error occurred." << std::endl;
 }
-#endif // TRAIN_H
     return 0;  
 
 }
