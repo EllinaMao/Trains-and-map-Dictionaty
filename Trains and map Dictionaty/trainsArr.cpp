@@ -1,18 +1,5 @@
 ﻿#include "trainsArr.h"
 
-
-bool TrainsArr::removeTrain(const std::string& trainNumber)
-{
-	auto it = std::remove_if(trains.begin(), trains.end(),
-		[&](const Train& t) { return t.getTrainNumber() == trainNumber; });
-
-	if (it != trains.end()) {
-		trains.erase(it, trains.end());
-		return true;
-	}
-	return false;
-}
-
 bool TrainsArr::trainExists(const std::string& trainNumber) const
 {
 	for (auto it = trains.cbegin(); it != trains.cend(); ++it) {

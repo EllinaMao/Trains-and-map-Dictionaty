@@ -21,7 +21,6 @@ public:
 
 	void addTrain(const Train& train) { trains.push_back(train); } //Ввод данных в систему.
 
-	bool removeTrain(const std::string& trainNumber);
 	const std::vector<Train>& getTrains() const { return trains; }
 	bool trainExists(const std::string& trainNumber) const;
 
