@@ -11,6 +11,7 @@ bool TrainsArr::trainExists(const std::string& trainNumber) const
 }
 
 void TrainsArr::printAllTrains() const {
+
 	for (auto it = trains.cbegin(); it != trains.cend(); ++it) {
 		it->out();
 	}

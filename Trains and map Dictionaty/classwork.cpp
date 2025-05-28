@@ -33,7 +33,13 @@ int main()
 try {
 
     TrainsArr trainsArr; 
+	cout << "One train: " << endl;
 	trainsArr.addTrain(Train("123", "10:00", "New York"));
+	trainsArr.printTrainInfo("123");
+	trainsArr.addTrain(Train("001", "10:00", "New York"));
+	trainsArr.addTrain(Train("002", "10:00", "New York"));
+	cout << "All trains: " << endl;
+	trainsArr.printAllTrains();
 
 }
 

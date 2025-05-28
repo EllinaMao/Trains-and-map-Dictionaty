@@ -13,10 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\task1">
+      <UniqueIdentifier>{3dca719f-479a-40ec-a96d-5ef39ab15d76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\task2">
+      <UniqueIdentifier>{67a5b5cf-8e43-43a4-90e4-5f920643de37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="classwork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="trainsArr.cpp">
+      <Filter>Header Files\task1</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Errors.h">
+      <Filter>Header Files\task1</Filter>
+    </ClInclude>
+    <ClInclude Include="train.h">
+      <Filter>Header Files\task1</Filter>
+    </ClInclude>
+    <ClInclude Include="trainsArr.h">
+      <Filter>Header Files\task1</Filter>
+    </ClInclude>
+    <ClInclude Include="Dictiotary.h">
+      <Filter>Header Files\task2</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

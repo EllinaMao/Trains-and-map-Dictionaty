@@ -9,8 +9,8 @@
 * Написать программу «Автоматизированная информационная система ЖД вокзала». Система содержит: сведения об отправлении поездов дальнего следования. Для каждого поезда указываем: номер, время отправления, станцию назначения.
 */
 
-class Train {
-public:
+struct Train {
+private:
 	std::string mTrainNumber; // Номер поезда
 	std::string mDepartureTime; // Время отправления
 	std::string mDestinationStation; // Станция назначения
@@ -33,6 +33,7 @@ public:
 		std::cout << "Train Number: " << mTrainNumber << "\n"
 			<< "Departure Time: " << mDepartureTime << "\n"
 			<< "Destination Station: " << mDestinationStation << "\n";
+		std::cout << "------------------------\n";
 	}
 
 };
