@@ -27,6 +27,9 @@
     <ClCompile Include="trainsArr.cpp">
       <Filter>Header Files\task1</Filter>
     </ClCompile>
+    <ClCompile Include="Dictiotary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Errors.h">
@@ -41,5 +44,8 @@
     <ClInclude Include="Dictiotary.h">
       <Filter>Header Files\task2</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
