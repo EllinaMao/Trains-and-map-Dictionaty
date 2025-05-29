@@ -4,27 +4,29 @@ void Dictionary::searchWord(const std::string& word) const
 {
     auto it = words.find(word);
     if (it != words.end()) {
-        std::cout << "Word: " << it->first << ", Definition: " << it->second << std::endl;
+        std::cout << "Word: " << it->first << "\nDefinition: " << it->second << std::endl << std::string(15, '-') << std::endl;
     }
     else {
-        std::cout << "Word not found." << std::endl;
+		throw WordNotFound();
     }
 }
 
-void Dictionary::saveToFile(const std::string& filename) const
-{
-    json j;
-    for (const auto& pair : words) {
-        j[pair.first] = pair.second;
-    }
-    std::ofstream file(filename);
-    if (file.is_open()) {
-        file << j.dump(4);
-        file.close();
-    }
-    else {
-        std::cerr << "Could not open file for writing." << std::endl;
-    }
+void Dictionary::saveToFile(const std::string& filename) const  
+{  
+    json j;  
+
+    for (auto it = words.cbegin(); it != words.cend(); ++it) {  
+        j[it->first] = it->second;  
+    }  
+
+    std::ofstream file(filename);  
+    if (file.is_open()) {  
+        file << j.dump(4);  
+        file.close();  
+    }  
+    else {  
+        throw FileCantOpen();  
+    }  
 }
 
 void Dictionary::loadFromFile(const std::string& filename)
@@ -39,13 +41,13 @@ void Dictionary::loadFromFile(const std::string& filename)
         file.close();
     }
     else {
-        std::cerr << "Could not open file for reading." << std::endl;
+		throw FileNotFound();
     }
 }
 
 void Dictionary::getWords(std::vector<std::string>& wordList) const
 {
-    for (const auto& pair : words) {
-        wordList.push_back(pair.first);
+    for (auto it = words.cbegin(); it != words.cend(); ++it) {
+        wordList.push_back(it->first);
     }
 }

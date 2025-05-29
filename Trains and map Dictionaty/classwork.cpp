@@ -2,6 +2,10 @@
 #include <vector>
 #include "train.h"
 #include "trainsArr.h"
+
+#include <map>
+#include <string>
+#include "Dictiotary.h"
 using namespace std;
 
 /*
@@ -41,6 +45,28 @@ try {
 	cout << "All trains: " << endl;
 	trainsArr.printAllTrains();
 
+
+	Dictionary dict;
+	Dictionary dict2;
+	dict.addWord("banana", "A long curved fruit that grows in clusters and has soft pulpy flesh and yellow skin when ripe.");
+	dict.addWord("cherry", "A small, round stone fruit that is typically red or black when ripe.");
+	dict.addWord("apple", "A fruit that is typically red, green, or yellow and is sweet and crisp.");
+	cout << "Dictionary contents:" << endl;
+	dict.printAllWords();
+	cout << "\nSearching for 'banana':" << endl;
+	dict.searchWord("banana");
+	cout << "\nEditing 'apple':" << endl;
+	dict.editWord("apple", "A sweet fruit that can be red, green, or yellow.");
+	cout << "\nAfter editing 'apple':" << endl;
+	dict.printAllWords();
+	cout << "\nRemoving 'cherry':" << endl;
+	dict.removeWord("cherry");
+
+	cout << "\nSaving and loading dictionary from file:" << endl;
+	dict.saveToFile("dictionary.json");
+	dict2.loadFromFile("dictionary.json");
+	cout << "\nLoaded dictionary from file:" << endl;
+	dict2.printAllWords();
 }
 
 catch (const std::exception& e) {

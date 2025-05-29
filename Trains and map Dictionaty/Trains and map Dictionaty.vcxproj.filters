@@ -32,9 +32,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Errors.h">
-      <Filter>Header Files\task1</Filter>
-    </ClInclude>
     <ClInclude Include="train.h">
       <Filter>Header Files\task1</Filter>
     </ClInclude>
@@ -43,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="Dictiotary.h">
       <Filter>Header Files\task2</Filter>
+    </ClInclude>
+    <ClInclude Include="Errors.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

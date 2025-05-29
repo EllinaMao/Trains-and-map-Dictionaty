@@ -29,3 +29,18 @@ struct IndexOutOfRange : public  std::out_of_range {
 	using std::out_of_range::out_of_range;
 	IndexOutOfRange() : std::out_of_range("Train index out of range") {};
 };
+
+struct FileNotFound : public Error {
+	using Error::Error;
+	FileNotFound() : Error("File not found") {};
+};
+
+struct WordNotFound : public Error {
+	using Error::Error;
+	WordNotFound() : Error("Word not found in the dictionary") {};
+};
+
+struct FileCantOpen : public Error {
+	using Error::Error;
+	FileCantOpen() : Error("Can`t open file") {};
+};

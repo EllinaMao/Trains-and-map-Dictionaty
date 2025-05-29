@@ -2,9 +2,9 @@
 #include <iostream>  
 #include <string>  
 #include <map>  
-#include <vector>  
 #include <nlohmann/json.hpp>  
 #include <fstream> 
+#include "Errors.h"
 
 using json = nlohmann::json; 
 class Dictionary {  
@@ -41,8 +41,9 @@ public:
         return words.empty();  
     }  
     void printAllWords() const {  
-        for (const auto& pair : words) {  
-            std::cout << "Word: " << pair.first << ", Definition: " << pair.second << std::endl;  
-        }  
+        for (auto it = words.begin(); it != words.end(); ++it) {
+            std::cout << "Word: " << it->first << "\nDefinition: " << it->second << std::endl
+                << std::string(15, '-') << std::endl;
+        }
 	}
 };
